@@ -32,7 +32,7 @@ app.use('/storage', (req, res, next) => {
 
 // App use default middleware
 app.use(cors({
-  origin: 'http://localhost:5173', // Allow requests from this origin (your frontend)
+  origin: ['http://localhost:5173', 'https://job-management-vrec.vercel.app/'], // Allow requests from this origin (your frontend)
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow GET and POST methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
   credentials: true, // Allow credentials (cookies, authorization headers, etc.)
@@ -68,7 +68,7 @@ mongoose.connect(DB_CONN, { autoIndex: true })
     console.log("MongoDB disconnected");
   });
 
-app.use("/", router);
+app.use("/auth", router);
 
 // Set the location of 'dist' folder from frontend
 app.use(express.static('client/dist'));
@@ -80,6 +80,7 @@ app.get('*', (req, res) => {
 
 // Handle 404 errors for all routes that are not defined
 app.all('*', (req, res) => {
+  console.log(`404 error for route: ${req.originalUrl}`); // Add logging for better debugging
   res.status(404).json({ message: `Can't find ${req.originalUrl} on the server` });
 });
 
