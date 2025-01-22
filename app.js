@@ -68,7 +68,7 @@ mongoose.connect(DB_CONN, { autoIndex: true })
     console.log("MongoDB disconnected");
   });
 
-app.use("/auth/", router);
+app.use("/auth", router);
 
 // Set the location of 'dist' folder from frontend
 app.use(express.static('client/dist'));
