@@ -44,7 +44,7 @@ export const googleSignUp = async (req, res) => {
           } else {
             return res.status(409).json({
               status: 'fail',
-              message: 'This email is registered manually with an email. Please use email/password login.',
+              message: 'This email is registered manually with an email. Please use email/password login system.',
             });
           }
         }
