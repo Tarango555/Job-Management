@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api/': {
-        target: 'http://localhost:8080', // Adjusted to backend port
+        target: 'http://localhost:8080/auth', // Adjusted to backend port
         changeOrigin: true, // This helps with cross-origin issues
       }
     }
