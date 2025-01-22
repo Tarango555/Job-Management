@@ -1,0 +1,96 @@
+/* Navbar Styling */
+.client-navbar {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .client-navbar .nav-link,
+  .client-navbar .dropdown-toggle {
+    color: #333;
+  }
+  
+  .client-navbar .nav-link:hover,
+  .client-navbar .dropdown-toggle:hover {
+    color: #000;
+  }
+  
+  .client-navbar .icon-link {
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .client-navbar .icon-link:hover {
+    color: #000;
+  }
+  
+  /* Offcanvas Styling */
+  .client-navbar-offcanvas {
+    background: #f8f9fa;
+    animation: slideIn 0.5s ease-in-out;
+  }
+  
+  .client-navbar-offcanvas .nav-link {
+    color: #333;
+  }
+  
+  .client-navbar-offcanvas .nav-link:hover {
+    color: #000;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Dropdown Styling */
+  .client-navbar .dropdown-menu {
+    animation: fadeSlideDown 0.3s ease-in-out;
+    margin-top: 0.5rem;
+    right: 0;
+    left: auto;
+    width: auto;
+    max-width: 90%;
+    word-wrap: break-word;
+    transform-origin: top;
+  }
+  
+  /* Dropdown Animation */
+  @keyframes fadeSlideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Adjustments for Tablet and Mobile */
+  @media (max-width: 992px) {
+    .client-navbar .dropdown-menu {
+      max-width: 90%;
+      right: 0 !important;
+      left: auto !important;
+      width: fit-content;
+    }
+  
+    /* Profile button adjustment for tablet */
+    .client-navbar .dropdown-toggle {
+      font-size: 16px; /* Make icon size consistent with desktop */
+      display: flex;
+      align-items: center;
+    }
+  
+    .client-navbar .dropdown-toggle span {
+      display: inline-block;
+      margin-left: 0.5rem; /* Space between icon and label */
+    }
+  }
+  

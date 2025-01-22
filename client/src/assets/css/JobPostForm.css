@@ -1,0 +1,63 @@
+/* JobPostForm.css */
+
+.job-post-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+  
+  .job-post-form-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .form-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #333333;
+  }
+  
+  .form-section {
+    margin-bottom: 40px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0056b3;
+    margin-bottom: 10px;
+  }
+  
+  .section-divider {
+    margin: 0 0 20px;
+    border: none;
+    height: 2px;
+    background-color: #0056b3;
+  }
+  
+  .field-instructions {
+    font-size: 0.95rem;
+    color: #666666;
+    margin-bottom: 15px;
+  }
+  
+  .form-actions {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  button[type="submit"] {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+  

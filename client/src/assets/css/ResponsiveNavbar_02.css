@@ -1,0 +1,36 @@
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar .nav-link {
+    color: #000;
+    font-weight: 500;
+  }
+  
+  .navbar .nav-link:hover {
+    color: #007bff;
+  }
+  
+  .navbar .btn {
+    font-weight: 600;
+  }
+  
+  .navbar-brand {
+    letter-spacing: 1px;
+  }
+  
+  .dropdown-menu {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
