@@ -70,17 +70,17 @@ mongoose.connect(DB_CONN, { autoIndex: true })
 
 app.use("/auth/", router);
 
-// Handle 404 errors for all routes that are not defined
-app.all('*', (req, res) => {
-  res.status(404).json({ message: `Can't find ${req.originalUrl} on the server` });
-});
-
 // Set the location of 'dist' folder from frontend
 app.use(express.static('client/dist'));
 
 // Add react frontend routing
 app.get('*', (req, res) => {
   res.sendFile(join(__dirname, 'client', 'dist', 'index.html'));
+});
+
+// Handle 404 errors for all routes that are not defined
+app.all('*', (req, res) => {
+  res.status(404).json({ message: `Can't find ${req.originalUrl} on the server` });
 });
 
 app.listen(PORT, () => {
