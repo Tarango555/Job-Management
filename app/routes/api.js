@@ -22,8 +22,6 @@ import {
 
 import { verifyAccessToken } from '../middlewares/verifyAccessToken.js';
 
-
-
 // Route for sign up
 router.post('/google-sign-up', googleSignUp);
 
